@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% load tables %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Search Results</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div id="globalsearch-search-group" class="input-group custom-search-form">
+                        <input id="globalsearch-search-input" type="text" class="form-control" value="{{ query_string }}">
+                        <span class="input-group-btn">
+                            <button id="globalsearch-search-button" class="btn btn-default" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% character_table character_list %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% story_table story_list %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% issue_table issue_list %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% brand_group_table brand_group_list %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% indicia_publisher_table indicia_publisher_list %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% publisher_table publisher_list %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% series_table series_list %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block lib %}
+     <script src="/static/javascript/globalsearch.js"></script>
+{% endblock %}

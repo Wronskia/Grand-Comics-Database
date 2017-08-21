@@ -1,0 +1,23 @@
+{% extends base %}
+
+{% load tables %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% character_table character_list %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            {% story_table %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block lib %}
+
+{% endblock %}
