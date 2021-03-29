@@ -1,5 +1,5 @@
 Django==1.11
-Pygments==2.2.0
+Pygments==2.7.4
 cx-Oracle==5.3
 django-debug-toolbar==1.8
 django-elasticsearch-dsl==0.1.0
